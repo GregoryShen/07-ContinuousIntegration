@@ -1,3 +1,7 @@
+[jenkins快速上手](https://www.bilibili.com/video/BV1jc411h79J)
+
+[用Jenkins自动化搭建测试环境](https://www.imooc.com/learn/1008)
+
 ### 课程介绍
 
 ----
@@ -88,7 +92,14 @@
 
 5-1 部署过程介绍
 
-5-2 创建Jenkins 自动化部署任务
+#### 5-2 创建Jenkins 自动化部署任务
+
+创建Jenkins部署任务
+
+1. 创建Jenkins任务
+2. 填写server信息
+3. 配置git参数
+4. 填写构建语句,实际部署测试环境
 
 5-3 运行部署任务
 
