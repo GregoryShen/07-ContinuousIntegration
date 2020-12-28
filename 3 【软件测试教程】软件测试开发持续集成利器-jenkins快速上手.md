@@ -52,15 +52,93 @@ jenkins 启动-docker启动
 
 启动
 
+选择“参数化构建过程”
+
+文本参数.
+
+勾选`限制项目的运行节点`
+
+构建环境下勾选: `Delete workspace before build starts`, 主要是用来在构建之前清理上一次构建的残留
+
+构建,增加构建步骤
 
 
 
+增加构建后的步骤
 
+然后保存.
 
+回到主界面后左侧导航栏中多了“`Build with Parameters`”
 
+### 创建一个自由风格的job
 
+### Job内配置-源码管理
 
+添加凭据,
 
+`Branches to build` 选择想要build的分支
+
+### Job内配置-触发器
+
+构建触发器, 选择定时构建, 日程表采用的是 cron格式
+
+### Job内配置-参数化构建
+
+This project is parametrized
+
+名称:
+
+默认值:
+
+### Job内配置-构建命令
+
+构建
+
+执行shell
+
+命令:
+
+```shell
+. ~/.bash_profile
+java -version
+mvn -Dtest=TestSearch test
+```
+
+### 凭据管理-创建凭据
+
+添加凭据
+
+```shell
+docker ps
+
+docker exec -it tech_jenkins bash
+```
+
+系统管理 -> 节点管理
+
+新建节点
+
+执行器数量:
+
+远程工作目录:
+
+标签:
+
+用法: 尽可能的使用这个节点
+
+启动方式: 通过Java Web启动代理
+
+点击Launch, 或者
+
+说明jenkins用的是本地的环境
+
+构建方式改成轮询, 然后等待时间测试
+
+钩子, 如果没有更新的话是不会更新的.
+
+### 全局工具配置-maven
+
+### 全局工具配置-jdk
 
 
 
