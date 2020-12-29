@@ -2,7 +2,7 @@
 
 This guided tour introduces you to the basics of using Jenkins and its main feature, Jenkins Pipeline. This tour uses the “standalone” Jenkins distribution, which runs locally on your own machine.
 
-### Prerequisites
+## Prerequisites
 
 For this tour, you will require:
 
@@ -13,7 +13,7 @@ For this tour, you will require:
   * Java 8 or 11 (either a JRE or Java Development Kit(JDK) is fine)
   * Docker (navigate to Get Docker site to access the Docker download that’s suiteable for your platform)
 
-### Download and run Jenkins
+## Download and run Jenkins
 
 1. Download Jenkins
 2. Open up a terminal in the download directory.
@@ -21,11 +21,13 @@ For this tour, you will require:
 4. Browse to http://localhost:8080
 5. Follow the instructions to complete the installation.
 
-Greating your first Pipeline
+## Creating your first Pipeline
 
-What is a Jenkins Pipeline?
+### What is a Jenkins Pipeline?
 
-### Running multiple steps
+### Quick Start Examples
+
+## Running multiple steps
 
 Piplines are made of multiple steps that allow you to build, test and deploy applications. Jenkins Pipeline allows you to compose multiple steps in an easy way that can help you model any sort of automation process.
 
@@ -33,9 +35,33 @@ Think of a “step” like a single command which performs a single action. When
 
 When all the steps in the Pipeline have successfully completed, the Pipeline is considered to have successfully executed.
 
-#### Linux, BSD, and Mac OS
+### Linux, BSD, and Mac OS
 
 On Linux, BSD, and Mac OS (Unix-like) systems, the sh step is used to execute a shell command in a Pipeline.
+
+### Timeouts, retries and more 
+
+### Finishing up
+
+## Defining execution environments
+
+## Using environment variables
+
+### Credentials in the Environment
+
+## Recording tests and artifacts
+
+## Cleaning up and notifications
+
+## Deployment
+
+### Stages as Deployment Environments
+
+### Asking for human input to proceed
+
+### Conclusion
+
+This Guided Tour introduced you to the basics of using Jenkins and Jenkins Pipeline. Because Jenkins is extremely extensible, it can be modified and configured to handle practically *any* aspect of automation. To learn more about what Jenkins can do, check out the User Handbook, or the Jenkins blog for the latest events, tutorials, and updates.
 
 # User Handbook
 
