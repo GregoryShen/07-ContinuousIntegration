@@ -18,9 +18,82 @@ Jenkins的最核心功能是以分布式的形式运行我们预先设置好的�
 
 ### 17.2 Jenkins 的安装
 
+Jenkins 的下载主要是从官网 https://jenkins.io/download 或者镜像站 http://mirrors.jenkins-ci.org/ 下载。我下载的是war包，war包的使用比较简单，镜像站中的 `mirrors.jenkins-ci.org/war/latest/` 这个地址可以下载到 `jenkins.war` 这个war 包。 安装方面， war包是免安装的。我们只需要在命令行里打开存放这个包的路径，然后使用以下命令启动 jenkins：
 
+```java
+java -jar jenkins.war
+```
+
+然后，我们打开浏览器，输入地址 http://localhost:8080/ ，经过一番等待后，正常的话就会看到这个界面：
+
+这里，我们按照提示，打开指定的文件，把管理员密码输进去，然后点击继续。 Jenkins这时应该跳转到下载插件的页面。
+
+在这个页面上，选择“选择插件来安装”，然后在后续页面上选择“无”， 再点击下方安装按钮：
+
+则可以不下载任何插件而完成Jenkins 的安装。我们可以在后面进入插件管理页面再进行安装和删除等管理操作。
+
+而如果在Jenkins界面时网络连接失败（国内有些网络经常遇到这个现象），则会进入下面界面：
+
+在这个页面上，我们选择“跳过插件安装”即可，也可以完成安装过程。后续仍然可以在插件管理页面进行插件下载安装，也可以后续通过手动安装等其他方式来安装插件。
+
+然后就到了“创建第一个管理员用户”页面：
+
+在这里，Jenkins要求我们创建第一个管理员用户，要求我们输入用户名 Username, Password。这里，我们可以依次这样输入：
+
+Username: admin
+
+Password: admin
+
+Confirm password: admin
+
+Full name: admin
+
+点击保存并完成后进入实例配置页面，这里保持默认值不需要改变， 直接保存并继续。
+
+然后点击开始使用Jenkins，进入Jenkins首页。
 
 ### 17.3 Jenkins 的插件配置和下载
+
+从Jenkins 首页上，我们要关注这几个链接：中间最大的 create new jobs 是用来创建新的 job 的。左边的 New Item （中文版为“新建任务”） 也是起到同样的作用。 左边的 Manage Jenkins 里可以对Jenkins 做配置。我们第一次使用Jenkins的话，需要下载一些插件，点击页面左侧的 manage Jenkins，进入Jenkins 管理页面：
+
+这个页面上显示的都是管理相关的功能，介绍如下：
+
+* Configure System：系统配置，一些全局参数的设置
+* Configure Global Security: 安全配置，定义谁可以用这个Jenkins
+* Global Tool Configuration：全局工具配置，用于配置Maven，JDK之类的工具，这里的配置对整个Jenkins生效
+* Reload Configuration from Disk：重置配置信息，以磁盘上存储的配置为准
+* Manage Plugins：添加、删除、或者禁用、启用插件，这个功能是最常用的
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
