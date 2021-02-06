@@ -63,39 +63,87 @@ Full name: admin
 * Global Tool Configuration：全局工具配置，用于配置Maven，JDK之类的工具，这里的配置对整个Jenkins生效
 * Reload Configuration from Disk：重置配置信息，以磁盘上存储的配置为准
 * Manage Plugins：添加、删除、或者禁用、启用插件，这个功能是最常用的
-* 
+* System Information: 展示 Jenkins 系统的一些属性
+* System Log: 这里可以看到 Jenkins 本身的日志
+* Load Statistics: 这里可以看到 Jenkins 的负载情况的图表
+* Jenkins CLI: Jenkins 命令行工具的帮助信息 
+* Script Console: 可以执行一些脚本. 这种属于高级功能, 脚本可以做到几乎任何事情
+* Manage Nodes: 管理节点. 节点包括 master 和 slave. Master 就是指我们安装 jerkins 的这台电脑, 而 slave 则是 master 可以管理的其他电脑, 我们可以把其他电脑设置成 Jenkins 的 slave, 从而在 slave 上运行 job.
+* About Jenkins: 显示版本和证书信息
+* Manage Old Data: 可以管理和删除一些过期数据.
+* Install as Windows Service: 用来把 Jenkins 注册成 Windows 服务
+* Manage Users: 用户管理
+* Prepare for Shutdown: 用来关闭 Jenkins 系统.
 
+这里, 我们点击 Manage Plugins 进入插件管理页面, 在这个页面上就可以下载 jerkins 的插件了:
 
+图略
 
+左侧 Install 列下的小方框里打钩, 然后按最下面的 Install without restart 按钮即可安装插件. 如果你进入这个页面之后看到的是空的列表, 那么说明网络出问题了, 连不上插件服务器. 此时需要手工安装插件, 进入上方 Advanced 这个标签页, 会跳转到这个界面:
 
+图略
 
+在这个界面上, 我们作为 Jenkins 管理员, 可以手工上传预先下载好的 `.hpi` 文件, 并在重启 Jenkins 后生效, 这样就可以做插件的手工安装了. 当然, 手工安装比较麻烦, 我们一般还是在插件列表里选择插件来安装. 
 
+除了手工安装插件以外, 还可以通过修改 Update Site 的 URL 来获取插件列表, 具体步骤如下:
 
+将 https://updates.jenkins.io/update-center.json 修改为 http://updates.jenkins.io/update-center.json 也就是把 https 改为 http 即可. 此外, 如果网速仍然缓慢, 可以修改为镜像站点: http://mirror.xmission.com/jenkins/updates/update-center.json
 
+此时, 从插件下载页面的 “Available” 选项卡下即可下载我们需要的插件. 以下是一个常用插件列表:
 
+Local
 
+Localization: Chinese(Simplified) 这个是本地化插件, 想要中文界面就必选
 
+Folders
 
+OWASP Markup Formatter
 
+Build Timeout
 
+Credentials Binding
 
+Timestamper
 
+Workspace Cleanup
 
+Maven Integration
 
+Pipeline
 
+GitHub Branch Source
 
+Pipeline: GitHub Groovy Libraries
 
+Git 这个是 Git 插件, 注意 filter 会过滤出一大堆和 git 有关的插件, 其中只有一个叫 Git 的
 
+Subversion 支持 svn 的插件, 如果不用 svn 可以不装
 
+SSH Slaves
 
+Matrix Authorization Strategy
 
+PAM Authentication
 
+LDAP
 
+Email Extension
 
+GitLab
 
+Ansible
 
+SaltStack
 
+Parameterized Trigger
 
+Build Pipeline
+
+Build Authorization Token Root
+
+如下图所示, 我们依次在右上角 Filter 中输入插件名称, 然后在下面列表中打钩, 如果有不确定打钩哪个的可以跳过. 等列表中所有插件都打完钩, 点击左下角 Install without restart 按钮, 然后等 Jenkins 一个一个安装插件即可.
+
+如果还有失败的可以尝试重复上面步骤再次下载或手工安装.
 
 ### 17.4 Jenkins 上创建和运行job
 
