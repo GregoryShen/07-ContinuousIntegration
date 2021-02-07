@@ -147,6 +147,47 @@ Build Authorization Token Root
 
 ### 17.4 Jenkins 上创建和运行job
 
+首先，我们在 Jenkins 首页上点击左侧” New Item”或者“新建任务”， 进入如下的 Jenkins job 创建页面。
 
+图略。
+
+这里我们可以输入 Job 的名称为 job001, 并且选择类型是 “构建一个自由风格的软件项目” 或者是 “Freestyle project”。注意这里可以选择的类型和我们安装的插件有关，如果你的 Jenkins 上类型比上图中少，说明缺少相应的插件。有时由于本地化插件的版本出错，也会遗留一些英文在界面上。
+
+图2 源码管理中的 git 的配置 （图略）
+
+Repository URL 为： https://github.com/TestUpCommunity/TUGithubAPI.git
+
+Branch Specifier (blank for ‘any’) 为 */teach_011
+
+其他不用选择，保持默认即可。
+
+图3 构建触发器的配置
+
+构建触发器我们这次不用做设置。
+
+其中重要的设置项有：
+
+* 如果要定时执行任务，则勾选 Build periodically
+* 如果要处理 post commit hook 来做到每次提交代码到指定分支都触发 job，则勾选 Poll SCM
+
+图4 构建环境的配置
+
+这里，勾选 Add timestamps to the Console Output 来给 job 执行日志加上时间戳。
+
+图5 构建步骤的配置
+
+这里选择 ”增加构建步骤“，然后选择 ”Execute shell“ 才能看到上图中的命令窗口，在命令窗口中输入 `echo "hello world"` 来完成我们的第一个 job。随后点击最下方的保存按钮。系统会自动跳转到以下页面。
+
+图6 新建的 Jenkins job 界面
+
+在这里，我们点击 Build Now 即可开始执行这个 job，在刚才的配置里，我们先从 github 上 clone 了我们接口测试项目，然后让脚本运行一个 hello world。运行一个job，也叫触发一个 job。
+
+图7 新建的 Jenkins job 触发后
+
+这个 Jenkins job 触发后，屏幕左侧出现 Build History 界面，点击序号 #1 前闪烁的圆球进入控制台日志显示界面。一个 job 每一次运行的记录，都称为一个 Build，这里显示的数字称为 Build ID。
+
+图8 新建的 Jenkins job 的运行日志
+
+在控制台输出的 job 运行日志中，我们可以看到， Jenkins 成功地使用 git 插件 clone 了我们的项目代码，并在屏幕上输出了 hello world。
 
 ### 17.5 Jenkins 上运行接口测试
