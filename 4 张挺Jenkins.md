@@ -191,3 +191,66 @@ Branch Specifier (blank for ‘any’) 为 */teach_011
 在控制台输出的 job 运行日志中，我们可以看到， Jenkins 成功地使用 git 插件 clone 了我们的项目代码，并在屏幕上输出了 hello world。
 
 ### 17.5 Jenkins 上运行接口测试
+
+首先，我们按照上一节的操作来创建一个新job，名为job002，这次在“源码管理”中直接选择“无”，因为我们要用命令行来完成所有操作。其他设置都一样，而命令窗口中的命令改为如下代码：
+
+```shell
+export token=xxxx # 替换成真实token
+export env = test_env
+
+rm -rf TUGithubAPI
+rm -rf TUGithubAPITest
+git clone https://github.com/TestUpCommunity/TUGithubAPI.git
+git clone https://github.com/TestUpCommunity/TUGithubAPITest.git
+cd TUGithubAPI
+git checkout teach_011
+cd ..
+cd TUGithubAPITest
+git checkout teach_011
+cd ..
+cd TUGithubTest/api_test/
+pytest
+```
+
+这些 shell 命令是分别clone了接口测试项目实战的两个子项目，并运行了其中的 TUGithubAPITest/api_tests 目录下的三个测试用例。
+
+运行结果的控制台输入如下：
+
+略
+
+最后，我们为这个 job 添加图形化的测试报告，首先在构建后操作中添加 ”Publish Junit test result report“ 这个步骤。
+
+然后把命令窗口最后一行修改为：
+
+`pytest --junitxml=output.xml`
+
+再次运行 job002， 我们可以通过点击最新测试结果或使用下面链接来看到如下界面：
+
+http://localhost:8080/job/job002/lastCompletedBuild/testReport/(root)/test_01_repos/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

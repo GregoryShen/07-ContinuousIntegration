@@ -1,3 +1,5 @@
+# [Jenkins 快速上手](https://www.bilibili.com/video/BV1jc411h79J)
+
 课程大纲
 
 jenkins介绍

@@ -1,6 +1,4 @@
-[jenkins快速上手](https://www.bilibili.com/video/BV1jc411h79J)
-
-[用Jenkins自动化搭建测试环境](https://www.imooc.com/learn/1008)
+# [用 Jenkins 自动化搭建测试环境](https://www.imooc.com/learn/1008)
 
 ### 课程介绍
 
