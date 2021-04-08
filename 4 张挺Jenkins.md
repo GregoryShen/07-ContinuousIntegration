@@ -230,11 +230,11 @@ http://localhost:8080/job/job002/lastCompletedBuild/testReport/(root)/test_01_re
 
 
 
+# [张挺持续集成基础](https://mp.weixin.qq.com/s?__biz=MzUyMTM4MzYyMw==&mid=2247483735&idx=1&sn=0be3230847927465703f91eed82cbf7d)
 
+# [张挺No.2 持续集成系统的HA](https://mp.weixin.qq.com/s?__biz=MzUyMTM4MzYyMw==&mid=2247483864&idx=1&sn=2a3653bc9fe6fa3465ac8f06ddcc5ab7)
 
-
-
-
+# [测试开发的技术 - 持续集成化](https://mp.weixin.qq.com/s?__biz=MzUyMTM4MzYyMw==&mid=2247484212&idx=1&sn=a45f10818f328492d11ccb20bfff562e)
 
 
 
