@@ -41,11 +41,11 @@ Job内的配置详解
 
 * 下载站点: https://jenkins.io/download/ 下载war包
 * 下载站点: https://jenkins.io/download/ 下载对应的dmg或exe文件
-* docker pull jenkins/jenkins
+* `docker pull jenkins/jenkins`
 
 Jenkins 启动 -war包启动
 
-* java -jar jenknis.war
+* `java -jar jenknis.war`
 * 将jenkins.war 放到
 
 jenkins 启动-docker启动
