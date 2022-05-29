@@ -23,13 +23,15 @@ For this tour, you will require:
 
 ## Creating your first Pipeline
 
+Jenkins Pipeline (or simply "Pipeline")
+
 ### What is a Jenkins Pipeline?
 
 ### Quick Start Examples
 
 ## Running multiple steps
 
-Piplines are made of multiple steps that allow you to build, test and deploy applications. Jenkins Pipeline allows you to compose multiple steps in an easy way that can help you model any sort of automation process.
+Pipelines are made of multiple steps that allow you to build, test and deploy applications. Jenkins Pipeline allows you to compose multiple steps in an easy way that can help you model any sort of automation process.
 
 Think of a “step” like a single command which performs a single action. When a step succeeds it moves onto the next step. When a step fails to execute correctly the Pipeline will fail.
 
